@@ -1,5 +1,6 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
+import { Link } from 'react-router-dom'
 import InputPrimax from '../../../components/InputPrimax'
 import FormHeader from '../FormHeader'
 
@@ -39,6 +40,17 @@ const FormLogin = () => {
                     required={true}
                     disabled={false}
                 />
+                <button
+                    className='btn-form'
+                >
+                    Ingresar
+                </button>
+                <div className="recover-password-link">
+                    <Link to="recover-password">
+                        <i className="icon-lock"></i>
+                        ¿Olvidaste tu contraseña?
+                    </Link>
+                </div>
             </form>
         </>
     )

@@ -16,19 +16,29 @@ const FormRecoverPassword = () => {
                 title="Restablecer contraseña"
                 description="Cambie su contraseña"
             />
+            <div className="info-recovery">
+                <p>
+                    Ingrese tu correo y te enviaremos un enlace para cambiar tu contraseña.
+                </p>
+            </div>
             <form
                 onSubmit={handleSubmit(onSubmit)}
             >
                 <InputPrimax
-                    label="Nombre del Producto"
-                    name="name"
+                    label="Correo"
+                    name="email"
                     register={register}
-                    placeholder=""
+                    placeholder="Ingrese su correo"
                     errors={errors}
                     type="text"
                     required={true}
                     disabled={false}
                 />
+                <button
+                    className='btn-form'
+                >
+                    Enviar
+                </button>
 
             </form>
         </>
