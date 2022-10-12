@@ -5,17 +5,17 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 0 0;
 }
-.login-container .login-banner {
+.login-banner {
   width: 100%;
   height: 100%;
   grid-column: 1 /3;
 }
-.login-container .login-banner img {
+.login-banner img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.login-container .login-content {
+.login-content {
   width: 100%;
   height: 100%;
   grid-column: 3 /4;
@@ -26,7 +26,7 @@
   flex-direction: column;
 }
 
-.login-container .login-content .login-content-logo {
+.login-content .login-content-logo {
   width: 100%;
   padding: 0 20px;
   display: flex;
@@ -34,31 +34,31 @@
   align-items: center;
   margin-bottom: 10px;
 }
-.login-container .login-content .login-content-logo img {
+.login-content .login-content-logo img {
   width: 80%;
   height: 80%;
   object-fit: contain;
 }
-.login-container .login-content .login-content-form {
+.login-content .login-content-form {
   width: 100%;
   padding: 0 30px;
 }
-.login-container .login-content .login-content-form-title {
+.login-content .login-content-form-title {
   font-weight: 500;
   color: var(--primary-color);
   margin-bottom: 10px;
 }
-.login-container .login-content .login-content-form-title h1 {
+.login-content .login-content-form-title h1 {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 0;
 }
-.login-container .login-content .login-content-form-title p {
+.login-content .login-content-form-title p {
   font-size: 1rem;
   font-weight: 400;
   margin-top: 0;
 }
-.login-container .login-content .btn-form {
+.login-content .btn-form {
   width: 100%;
   padding: 10px 0;
   border: none;
@@ -77,13 +77,13 @@
   -o-border-radius: 4px;
 }
 
-.login-container .login-content .recover-password-link {
+.login-content .recover-password-link {
   width: 100%;
   display: flex;
   align-items: center;
   margin-top: 10px;
 }
-.login-container .login-content .recover-password-link a {
+.login-content .recover-password-link a {
   width: 100%;
   font-size: 12px;
   font-weight: 500;
