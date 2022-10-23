@@ -1,0 +1,112 @@
+.pettycash{
+
+}
+
+.pettycash h2{
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+}
+
+.pettycash .card-table{
+    width: 100%;
+    border-radius: 12px 12px 0px 0px;
+    -webkit-border-radius: 12px 12px 0px 0px;
+    -moz-border-radius: 12px 12px 0px 0px;
+    -ms-border-radius: 12px 12px 0px 0px;
+    -o-border-radius: 12px 12px 0px 0px;
+    background: #ffffff;
+    padding: 30px 32px;
+}
+.ant-table-thead>tr>th{
+    background: var(--primary-color) !important;
+    color: #ffffff !important;
+}
+
+
+/* filter content */
+
+.filter-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.filter-content .form-filter{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.label-filter{
+    font-weight: 600;
+    font-size: 14px !important;
+    line-height: 24px;
+    color: #273b49;
+}
+.input-filter input{
+    height:35px !important;
+    width: 194px !important;
+}
+
+.btn-filter{
+    background: var(--primary-color);
+    color: #ffffff;
+    height: 35px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border: none;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 0 8px;
+    gap: 4px;
+    display: flex;
+    align-items: center;
+    margin-top: 19px;
+    cursor: pointer;
+}
+.btn-filter.reset{
+    background: #74788D;
+}
+
+/* buttons actions */
+.filter-buttons{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+
+}
+
+
+.btn-filter.underline{
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    background: #ffffff;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+@media (max-width: 768px ){
+    .filter-content{
+        flex-direction: column;
+    }
+    .filter-content .form-filter{
+        flex-wrap: wrap;
+        gap: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    .filter-buttons{
+        margin-top: 12px;
+        margin-bottom: 12px;
+        flex-wrap: wrap;
+        gap: 2px;
+        display: flex;
+    }
+}   

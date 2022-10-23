@@ -12,6 +12,7 @@ interface FormHeaderProps {
     labelClass?: string
     labelExtra?: string
     disabled?: boolean
+    inputClass?: string
 }
 const InputPrimax = (
     {
@@ -24,7 +25,8 @@ const InputPrimax = (
         type,
         labelClass,
         labelExtra,
-        disabled = false
+        disabled = false,
+        inputClass,
     }: FormHeaderProps
 ) => {
     const [typeInput, setTypeInput] = useState<string>(type)
@@ -34,7 +36,7 @@ const InputPrimax = (
                 {label}
                 {labelExtra}
             </label>
-            <div className="inputPrimax-input">
+            <div className={`inputPrimax-input ${inputClass} `}>
                 <input
                     disabled={disabled}
                     {...register(name, { required: required ? required : false })}
