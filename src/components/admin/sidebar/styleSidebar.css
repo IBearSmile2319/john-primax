@@ -104,10 +104,14 @@
     margin-top: 0;
     margin-left: 0;
   }
-  .admin-sidebar__container > nav > ul > li {
+  .admin-sidebar__container > nav > ul  li {
     list-style: none;
     padding-bottom: 0.25rem;
     padding-top: 0.5rem;
+  }
+  .admin-sidebar__container > nav > ul  li.acordion{
+    padding-bottom: 0;
+    padding-top: 0;
   }
   
   .admin-sidebar__container > nav > ul .sidebar-option {
@@ -117,12 +121,20 @@
     display: flex;
     flex-wrap: wrap;
   }
-  .admin-sidebar__container > nav > ul .sidebar-option > li {
+  .admin-sidebar__container > nav > ul .sidebar-option.active{
+    background: rgba(255, 105, 0, 0.15);
+  }
+  .admin-sidebar__container > nav > ul .sidebar-option  li {
     font-size: 0.9rem;
     list-style: none;
     width: 100%;
   }
-  .admin-sidebar__container > nav > ul .sidebar-option > li > a {
+  .admin-sidebar__container > nav > ul .sidebar-option  li.acordion{
+    font-size: 12px;
+    list-style: none;
+    width: 100%;
+  }
+  .admin-sidebar__container > nav > ul .sidebar-option  li  a {
     transition: background 0.15s;
     -webkit-transition: background 0.15s;
     -moz-transition: background 0.15s;
@@ -138,14 +150,19 @@
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
-  .admin-sidebar__container > nav > ul .sidebar-option > li > a:hover {
+ 
+  .admin-sidebar__container > nav > ul .sidebar-option  li  a:hover {
     background: #f5f5f5;
   }
-  .admin-sidebar__container > nav > ul .sidebar-option > li > a.active {
+  .admin-sidebar__container > nav > ul .sidebar-option  li  a.active {
     background: var(--primary-color);
     color: #fff;
   }
-  .admin-sidebar__container > nav > ul .sidebar-option > li > a > .title {
+  .admin-sidebar__container > nav > ul .sidebar-option  li.acordion  a.active{
+    background: rgba(255, 105, 0, 0.15);
+    color: #272833;
+  }
+  .admin-sidebar__container > nav > ul .sidebar-option  li  a > .title {
     pointer-events: none;
     opacity: 0;
     transition: opacity 0.25s;
@@ -155,7 +172,11 @@
     margin-bottom: 0;
     margin-left: 0.5rem;
   }
-  .admin-sidebar__container > nav > ul .sidebar-option > li > a .icon {
+  .admin-sidebar__container > nav > ul .sidebar-option  li.acordion a > .title{
+    border-bottom: 0.25px solid #272833;
+    width: 100%;
+  }
+  .admin-sidebar__container > nav > ul .sidebar-option  li  a .icon {
     font-size: 1.2rem;
     width: 1.5rem;
     height: 1.5rem;

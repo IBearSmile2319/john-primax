@@ -12,10 +12,17 @@ interface Props {
 
 const Sidebar = ({ menuOpen, setMenuOpen, setMenuClose }: Props) => {
   const [iconMenu, setIconMenu] = React.useState(true)
-  const activeLink = (to: string, item:ILink ) => {
-    let resolved = useResolvedPath(to)
-    let match = useMatch({ path: resolved.pathname, end: true })
-    return match ? item.iconActive : item.icon
+  const path = window.location.pathname;
+
+  const activeLink = (to: string, item: ILink) => {
+    // let resolved = useResolvedPath(to)
+    // let match = useMatch({ path: resolved.pathname, end: true })
+    // // return match ? item.iconActive : item.icon
+    // return match ? item.iconActive : item.icon
+    return path.includes(to) ? item.iconActive : item.icon
+  }
+  const checkActive = (to: string) => {
+    return path.includes(to) ? 'active' : ''
   }
   return (
     <div className={`admin-sidebar__container ${!menuOpen ? 'hide' : 'show'}`}
@@ -39,11 +46,12 @@ const Sidebar = ({ menuOpen, setMenuOpen, setMenuClose }: Props) => {
           {
             Links.map((item, index) => {
               return (
-                <div className="sidebar-option" key={index}>
+                <div className={`sidebar-option ${checkActive(item.path) && menuOpen ? 'active' : ''
+                  }`} key={index}>
                   <li>
                     <CustomLinkActive
                       to={item.path}
-                      onClick={setMenuClose}
+                      // onClick={setMenuClose}
                     >
                       <div>
                         <i className={`${activeLink(item.path, item)} icon`} />
@@ -57,6 +65,29 @@ const Sidebar = ({ menuOpen, setMenuOpen, setMenuClose }: Props) => {
                       </span>
                     </CustomLinkActive>
                   </li>
+                  {
+                    checkActive(item.path) && menuOpen &&
+                    item?.subMenu && item?.subMenu.map((sub, index) => (
+                      <li key={index} className="acordion">
+                        <CustomLinkActive
+                          to={item.path + "/" + sub.path}
+                          onClick={setMenuClose}
+                        >
+                          <div>
+                            {/* <i className={`${activeLink(item.path + sub.path, item)} icon`} /> */}
+                          </div>
+                          <span className="title"
+                            style={{
+                              opacity: !menuOpen ? '0' : '1',
+                            }}
+                          >
+                            {sub.name}
+                          </span>
+                        </CustomLinkActive>
+                      </li>
+                    )
+                    )
+                  }
                 </div>
               )
             })

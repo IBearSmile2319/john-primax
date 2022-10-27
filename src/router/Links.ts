@@ -4,6 +4,7 @@ import AnnualManagement from "../pages/admin/budgets/annualmanagement/AnnualMana
 import Budgets from "../pages/admin/budgets/Budgets";
 import Maintenance from "../pages/admin/maintenance/Maintenance";
 import Providers from "../pages/admin/maintenance/providers/Providers";
+import RegistrationOfConcepts from "../pages/admin/maintenance/RegistrationOfConcepts/RegistrationOfConcepts";
 
 export interface ILink {
     name: string;
@@ -25,10 +26,15 @@ const Links: ILink[] = [
         iconActive: "icon-dns-secondary",
         subMenu: [
             {
-                name: 'proveedores',
+                name: 'Proveedores',
                 path: '',
                 element: Providers,
             },
+            {
+                name: 'Registro de conceptos',
+                path: 'registro-conceptos',
+                element: RegistrationOfConcepts
+            }
         ]
     },
     {

@@ -38,16 +38,7 @@
     align-items: center;
     gap: 12px;
 }
-.label-filter{
-    font-weight: 600;
-    font-size: 14px !important;
-    line-height: 24px;
-    color: #273b49;
-}
-.input-filter input{
-    height:35px !important;
-    width: 194px !important;
-}
+
 
 .btn-filter{
     background: var(--primary-color);

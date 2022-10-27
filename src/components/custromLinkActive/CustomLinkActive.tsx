@@ -9,12 +9,15 @@ interface Props {
 }
 
 const CustomLinkActive = ({ to, children, className, onClick }: Props) => {
+    const path = window.location.pathname;
     let resolved = useResolvedPath(to)
     let match = useMatch({ path: resolved.pathname, end: true })
     return (
         <Link to={to}
             onClick={onClick}
-            className={`${className ? className : ''}  ${match ? 'active' : ''}`}
+            className={`${className ? className : ''}  ${
+                match || path.includes(to) ? 'active' : ''
+            }`}
         >
             {children}
         </Link>

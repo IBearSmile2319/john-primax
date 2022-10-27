@@ -271,3 +271,18 @@ body {
   height: 24px;
   background-image: url("data:image/svg+xml,%3Csvg width='21' height='24' viewBox='0 0 21 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.3138 1.84619H3.24024C3.24024 1.84619 1.82617 2.19269 1.82617 3.50717V18.6353C1.82617 18.6353 1.87939 20.2731 3.32912 20.2731H11.3654L9.51759 18.447H3.67984V3.68647H10.211V8.31344H14.8902V12.9094H16.7497V7.16984L11.3138 1.84619Z' fill='%23FF6900'/%3E%3Cpath d='M8.33127 9.22998H6.50155L8.36107 12.675L6.29346 16.1378H8.08805L9.29402 14.0194L10.4462 16.1378H12.3175L10.31 12.6282L12.2701 9.22998H10.4228L9.42441 11.5366L8.33127 9.22998Z' fill='%23FF6900'/%3E%3Cpath d='M16.7497 14.7617H14.8843V18.4533H12.0977L15.8438 22.1538L19.5953 18.4475H16.7497V14.7617Z' fill='%23FF6900'/%3E%3C/svg%3E");
 }
+
+
+
+/* filter */
+.label-filter{
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  line-height: 24px;
+  color: #273b49;
+}
+.input-filter input{
+  height:35px !important;
+  width: 194px !important;
+  color: #273b49 !important;
+}

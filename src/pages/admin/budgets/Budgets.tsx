@@ -1,8 +1,11 @@
 import React from 'react'
+import { Outlet } from 'react-router-dom'
 
 const Budgets = () => {
   return (
-    <div>Budgets</div>
+    <div>
+      <Outlet/>
+    </div>
   )
 }
 

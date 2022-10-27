@@ -1,8 +1,11 @@
 import React from 'react'
+import { Outlet } from 'react-router-dom'
 
 const Maintenance = () => {
   return (
-    <div>maintenance</div>
+    <div>
+       <Outlet />
+    </div>
   )
 }
 
