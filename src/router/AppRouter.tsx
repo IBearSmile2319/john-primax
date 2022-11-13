@@ -1,14 +1,26 @@
+import { useEffect } from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
+import { useAppDispatch, useAppSelector } from '../hooks/useReducer'
 import ChangePassword from '../pages/changePassword/ChangePassword'
 import FormLogin from '../pages/login/formLogin/FormLogin'
 import FormRecoverPassword from '../pages/login/formRecoverPassword/FormRecoverPassword'
 import Login from '../pages/login/Login'
+import { refreshToken } from '../store/userSlice/user.thunks'
 import Links, { ILink } from './Links'
 import { CHANGE_PASSWORD, LOGIN, RECOVER_PASSWORD } from './ListRoutesFlow'
 import PrivateRoutes from './PrivateRoutes'
 
 const AppRouter = () => {
-  const auth = true
+  const dispatch = useAppDispatch()
+  const {
+    user,
+    loading,
+    token,
+  } = useAppSelector(state => state.user)
+
+  useEffect(() => {
+      dispatch(refreshToken())
+  }, [dispatch])
 
   const renderRoutes = (item: ILink, index: number) => {
     if (item.subMenu) {
@@ -36,7 +48,10 @@ const AppRouter = () => {
 
   return (
     <Routes>
-      <Route path="/" element={<PrivateRoutes admin={auth} />} >
+      <Route path="/" element={<PrivateRoutes admin={
+        // token ? true : false
+        true
+        } />}>
         <Route index element={<Navigate to="/gastos" />} />
         {
           Links.map((link, index) => renderRoutes(link, index))

@@ -1,43 +1,62 @@
 import { Table } from "antd";
 import { ColumnsType } from "antd/lib/table";
 import React from "react";
+import { IProviderObjModel } from "../../../../store/providers/providers.interface";
 import { DataTypeProvider } from "./DataFlow";
 
 interface IProps {
-  data: DataTypeProvider[];
+  data: IProviderObjModel[];
 }
 
 const TableProviders = ({ data }: IProps) => {
-  const columns: ColumnsType<DataTypeProvider> = [
+  const columns: ColumnsType<IProviderObjModel> = [
     {
       title: "RUC",
       dataIndex: "ruc",
       key: "ruc",
     },
     {
-      title: "Descripción",
-      dataIndex: "description",
-      key: "description",
+      title: "Razón Social",
+      dataIndex: "businessName",
+      key: "businessName",
     },
     {
-      title: "Teléfono",
-      dataIndex: "telefono",
-      key: "telefono",
+      title: "UBIGEO",
+      dataIndex: "department",
+      key: "department",
     },
     {
-      title: "Dirección",
-      dataIndex: "direccion",
-      key: "direccion",
+      title: "DIRECCIÓN",
+      dataIndex: "direction",
+      key: "direction",
     },
     {
-      title: "Contacto",
-      dataIndex: "contacto",
-      key: "contacto",
+      title: "PERSONA ENCARGADA",
+      dataIndex: "personInCharge",
+      key: "personInCharge",
     },
     {
-      title: "Estado",
-      dataIndex: "estado",
-      key: "estado",
+      title: "TEL. O CELULAR",
+      dataIndex: "cellPhone",
+      key: "cellPhone",
+    },
+    {
+      title: "ESTADO",
+      dataIndex: "state",
+      key: "state",
+      render: (state: boolean) => {
+        return state ? "Activo" : "Inactivo";
+      },
+    },
+    {
+      title: "ESTADO DEL CONTRIBUYENTE",
+      dataIndex: "taxpayerStatus",
+      key: "taxpayerStatus",
+    },
+    {
+      title: "FECHA DE REGISTRO",
+      dataIndex: "registrationDate",
+      key: "registrationDate",
     },
     {
       title: "OPCIONES",
