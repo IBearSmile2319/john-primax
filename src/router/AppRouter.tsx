@@ -52,7 +52,7 @@ const AppRouter = () => {
         // token ? true : false
         true
         } />}>
-        <Route index element={<Navigate to="/gastos" />} />
+        <Route index element={<Navigate to="/mantenimiento" />} />
         {
           Links.map((link, index) => renderRoutes(link, index))
         }

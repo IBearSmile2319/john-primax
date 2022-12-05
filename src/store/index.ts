@@ -1,5 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { providersSlice } from "./providers/providers.slice";
+import { regOfConceptsSlice } from "./registrationOfConcepts/regOfConcepts.slice";
 import { userSlice } from "./userSlice/user.slice";
 
 export const store = configureStore({
@@ -7,6 +8,7 @@ export const store = configureStore({
     // reducers
     user: userSlice.reducer,
     providers: providersSlice.reducer,
+    regOfConcepts: regOfConceptsSlice.reducer,
   },
 });
 

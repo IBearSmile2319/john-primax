@@ -2,7 +2,7 @@ import { Table } from "antd";
 import { ColumnsType } from "antd/lib/table";
 import React from "react";
 import { IProviderObjModel } from "../../../../store/providers/providers.interface";
-import { DataTypeProvider } from "./DataFlow";
+// import { DataTypeProvider } from "./DataFlow";
 
 interface IProps {
   data: IProviderObjModel[];

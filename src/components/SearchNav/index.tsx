@@ -1,23 +1,25 @@
+import { yupResolver } from "@hookform/resolvers/yup";
 import React from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-import InputPrimax from "../../../../components/InputPrimax";
-import SelectPrimax from "../../../../components/SelectPrimax/SelectPrimax";
-import { yupResolver } from "@hookform/resolvers/yup";
+import SelectPrimax from "../SelectPrimax/SelectPrimax";
 import * as yup from "yup";
+import InputPrimax from "../InputPrimax";
+
+
 interface IOptions {
-  value: number;
-  label: string;
-}
-const data: IOptions[] = [
-  {
-    value: 1,
-    label: "RUC",
-  },
-  {
-    value: 2,
-    label: "N° Telefónico",
-  },
-];
+    value: number;
+    label: string;
+  }
+  const data: IOptions[] = [
+    {
+      value: 1,
+      label: "RUC",
+    },
+    {
+      value: 2,
+      label: "N° Telefónico",
+    },
+  ];
 
 interface IProps {
   onSearch?: (data: any) => void | undefined;
@@ -25,7 +27,7 @@ interface IProps {
   //   promise
   downloadExcel?: () => Promise<any> | void;
 }
-const SearchProvider = ({ onSearch, onReset, downloadExcel }: IProps) => {
+const SearchNav = ({ onSearch, onReset, downloadExcel }: IProps) => {
   const {
     register,
     handleSubmit,
@@ -105,4 +107,4 @@ const SearchProvider = ({ onSearch, onReset, downloadExcel }: IProps) => {
   );
 };
 
-export default SearchProvider;
+export default SearchNav;

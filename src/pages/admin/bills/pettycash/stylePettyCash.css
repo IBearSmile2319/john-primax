@@ -8,6 +8,13 @@
     line-height: 48px;
 }
 
+@media (max-width: 768px){
+    .pettycash h2{
+        font-size: 20px;
+        line-height: 36px;
+    }
+}
+
 .pettycash .card-table{
     width: 100%;
     border-radius: 12px 12px 0px 0px;
@@ -17,6 +24,11 @@
     -o-border-radius: 12px 12px 0px 0px;
     background: #ffffff;
     padding: 30px 32px;
+}
+@media (max-width: 768px){
+    .pettycash .card-table{
+        padding: 20px 16px;
+    }
 }
 .ant-table-thead>tr>th{
     background: var(--primary-color) !important;

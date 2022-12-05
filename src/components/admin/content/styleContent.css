@@ -2,3 +2,9 @@
     background: #EEEEF3;
     padding: 16px 32px
 }
+
+@media (max-width: 768px){
+    .admin-content__container{
+        padding: 10px 5px
+    }
+}
