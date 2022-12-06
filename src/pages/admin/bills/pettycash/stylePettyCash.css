@@ -42,13 +42,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+    margin-bottom: 12px;
 }
 
 .filter-content .form-filter{
     display: flex;
     align-items: center;
     gap: 12px;
+    
 }
 
 

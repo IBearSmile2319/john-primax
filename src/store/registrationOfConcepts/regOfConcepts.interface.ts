@@ -1,6 +1,7 @@
 
 export interface IRegOfConceptsInitialState {
     regOfConcepts: IRegOfConceptsObjModel[],
+    selectedRegOfConcept: IRegOfConceptsObjModel | null,
     isLoading: boolean,
     error: string
 }

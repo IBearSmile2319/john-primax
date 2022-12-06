@@ -18,4 +18,46 @@ export const GET_EXPORTE_PROVIDERS = `${GET_PROVIDERS}/Export`;
 // *************************************************************************************************
 
 export const GET_REGISTER_OF_CONCEPTS = "/RegistrationOfConcepts";
+export const POST_REGISTER_OF_CONCEPTS = `${GET_REGISTER_OF_CONCEPTS}`;
+export const PUT_REGISTER_OF_CONCEPTS = `${GET_REGISTER_OF_CONCEPTS}`;
+export const DELETE_REGISTER_OF_CONCEPTS = `${GET_REGISTER_OF_CONCEPTS}/delete/:id`;
 export const GET_EXPORTE_REGISTER_OF_CONCEPTS = `${GET_REGISTER_OF_CONCEPTS}/Export`;
+
+// *************************************************************************************************
+//                        PURCHASE ORDERS PATHS
+// *************************************************************************************************
+export const GET_PURCHASE_ORDERS = "/PurchaseOrders";
+export const POST_PURCHASE_ORDERS = `${GET_PURCHASE_ORDERS}`;
+export const PUT_PURCHASE_ORDERS = `${GET_PURCHASE_ORDERS}`;
+export const DELETE_PURCHASE_ORDERS = `${GET_PURCHASE_ORDERS}/delete/:id`;
+export const GET_EXPORTE_PURCHASE_ORDERS = `${GET_PURCHASE_ORDERS}/Export`;
+
+// *************************************************************************************************
+//                      OPERATION MANAGEMENT se usa en el post de purchase orders
+// *************************************************************************************************
+export const GET_OPERATION_MANAGEMENT = "/OperationManagement";
+// falta
+
+// *************************************************************************************************
+//                      USER OPERATIONS
+// *************************************************************************************************
+export const GET_USER_OPERATIONS = "/UserOperations";
+// falta
+
+// *************************************************************************************************
+//                      MATERIALS MANAGEMENT api no funciona aun no se integra
+// *************************************************************************************************
+export const GET_MATERIALS_MANAGEMENT = "/MaterialsManagement";
+// falta
+
+// *************************************************************************************************
+//                      ITEMS tambien no funciona y falta integrar
+// *************************************************************************************************
+export const GET_ITEMS = "/Items";
+// falta
+
+// *************************************************************************************************
+//                      DOCUMENT REGISTRATION
+// *************************************************************************************************
+export const GET_DOCUMENT_REGISTRATION = "/DocumentRegistration";
+// falta

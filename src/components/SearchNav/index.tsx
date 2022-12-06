@@ -5,29 +5,36 @@ import SelectPrimax from "../SelectPrimax/SelectPrimax";
 import * as yup from "yup";
 import InputPrimax from "../InputPrimax";
 
-
 interface IOptions {
-    value: number;
-    label: string;
-  }
-  const data: IOptions[] = [
-    {
-      value: 1,
-      label: "RUC",
-    },
-    {
-      value: 2,
-      label: "N° Telefónico",
-    },
-  ];
+  value: number;
+  label: string;
+}
+const data: IOptions[] = [
+  {
+    value: 1,
+    label: "RUC",
+  },
+  {
+    value: 2,
+    label: "N° Telefónico",
+  },
+];
 
 interface IProps {
   onSearch?: (data: any) => void | undefined;
   onReset?: () => void | undefined;
+  importExcel?: () => void | undefined;
   //   promise
   downloadExcel?: () => Promise<any> | void;
+  addNew?: () => void;
 }
-const SearchNav = ({ onSearch, onReset, downloadExcel }: IProps) => {
+const SearchNav = ({
+  onSearch,
+  onReset,
+  downloadExcel,
+  addNew,
+  importExcel,
+}: IProps) => {
   const {
     register,
     handleSubmit,
@@ -54,44 +61,56 @@ const SearchNav = ({ onSearch, onReset, downloadExcel }: IProps) => {
   return (
     <div className="filter-content">
       <div className="form-filter">
-        <form className="form-filter" onSubmit={handleSubmit(onSubmit)}>
-          <SelectPrimax
-            label="Criterio de búsqueda"
-            values={data}
-            {...register("option")}
-            labelClass="label-filter"
-          />
-          <InputPrimax
-            label="Número"
-            name="search"
-            register={register}
-            placeholder="Text"
-            errors={errors}
-            type="text"
-            required={true}
-            disabled={false}
-            labelClass="label-filter"
-            inputClass="input-filter"
-          />
-          <button type="submit" className="btn-filter">
-            <i className="icon-filter"></i>
-            Buscar
-          </button>
-        </form>
-        <button className="btn-filter reset" onClick={onClear}>
-          <i className="icon-reset"></i>
-          Limpiar
-        </button>
+        {onSearch && (
+          <>
+            <form className="form-filter" onSubmit={handleSubmit(onSubmit)}>
+              <SelectPrimax
+                label="Criterio de búsqueda"
+                values={data}
+                {...register("option")}
+                labelClass="label-filter"
+              />
+              <InputPrimax
+                label="Número"
+                name="search"
+                register={register}
+                placeholder="Text"
+                errors={errors}
+                type="text"
+                required={true}
+                disabled={false}
+                labelClass="label-filter"
+                inputClass="input-filter"
+              />
+              <button type="submit" className="btn-filter">
+                <i className="icon-filter"></i>
+                Buscar
+              </button>
+            </form>
+            <button className="btn-filter reset" onClick={onClear}>
+              <i className="icon-reset"></i>
+              Limpiar
+            </button>
+          </>
+        )}
       </div>
       <div className="filter-buttons">
-        <button type="submit" className="btn-filter underline">
-          <i className="icon-publish"></i>
-          Importar registro
-        </button>
-        <button type="submit" className="btn-filter underline">
-          <i className="icon-add"></i>
-          Nuevo registro
-        </button>
+        {importExcel && (
+          <button type="submit" className="btn-filter underline">
+            <i className="icon-publish"></i>
+            Importar registro
+          </button>
+        )}
+        {addNew && (
+          <button
+            type="submit"
+            className="btn-filter underline"
+            onClick={addNew}
+          >
+            <i className="icon-add"></i>
+            Nuevo registro
+          </button>
+        )}
         {downloadExcel && (
           <button
             type="submit"

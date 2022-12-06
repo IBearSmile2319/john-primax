@@ -5,6 +5,7 @@ import { IRegOfConceptsInitialState } from "./regOfConcepts.interface";
 
 const initialState: IRegOfConceptsInitialState = {
   regOfConcepts: [],
+  selectedRegOfConcept: null,
   isLoading: false,
   error: "",
 };
@@ -24,6 +25,13 @@ export const regOfConceptsSlice = createSlice({
       state.regOfConcepts = action.payload;
       state.isLoading = false;
     },
+    setSelectedRegOfConcept: (
+      state,
+      action: PayloadAction<IRegOfConceptsInitialState["selectedRegOfConcept"]>
+    ) => {
+      state.selectedRegOfConcept = action.payload;
+      state.isLoading = false;
+    },
     setError: (
       state,
       action: PayloadAction<IRegOfConceptsInitialState["error"]>
@@ -34,5 +42,9 @@ export const regOfConceptsSlice = createSlice({
   },
 });
 
-export const { setIsLoading, setRegOfConcepts, setError } =
-  regOfConceptsSlice.actions;
+export const {
+  setIsLoading,
+  setRegOfConcepts,
+  setError,
+  setSelectedRegOfConcept,
+} = regOfConceptsSlice.actions;

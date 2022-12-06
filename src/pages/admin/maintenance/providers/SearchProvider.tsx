@@ -52,6 +52,9 @@ const SearchProvider = ({ onSearch, onReset, downloadExcel }: IProps) => {
   return (
     <div className="filter-content">
       <div className="form-filter">
+        {
+          onSearch && (
+            <>
         <form className="form-filter" onSubmit={handleSubmit(onSubmit)}>
           <SelectPrimax
             label="Criterio de búsqueda"
@@ -80,6 +83,9 @@ const SearchProvider = ({ onSearch, onReset, downloadExcel }: IProps) => {
           <i className="icon-reset"></i>
           Limpiar
         </button>
+        </>
+          )
+        }
       </div>
       <div className="filter-buttons">
         <button type="submit" className="btn-filter underline">

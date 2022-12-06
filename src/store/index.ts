@@ -1,6 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
+import { operationManagementSlice } from "./operationManagement/operationManagement.slice";
 import { providersSlice } from "./providers/providers.slice";
+import { purchaseOrdersSlice } from "./purchaseOrders/purchaseOrders.slice";
 import { regOfConceptsSlice } from "./registrationOfConcepts/regOfConcepts.slice";
+import { userOperationsSlice } from "./userOperations/userOperations.slice";
 import { userSlice } from "./userSlice/user.slice";
 
 export const store = configureStore({
@@ -9,6 +12,9 @@ export const store = configureStore({
     user: userSlice.reducer,
     providers: providersSlice.reducer,
     regOfConcepts: regOfConceptsSlice.reducer,
+    purchaseOrders: purchaseOrdersSlice.reducer,
+    operationManagement: operationManagementSlice.reducer,
+    userOperations: userOperationsSlice.reducer,
   },
 });
 

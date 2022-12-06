@@ -76,6 +76,24 @@
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
 }
+.btn-form {
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 4px;
+  margin-top: 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  /* height: 40px; */
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
 
 .login-content .recover-password-link {
   width: 100%;

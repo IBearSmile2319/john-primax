@@ -13,6 +13,7 @@ interface FormHeaderProps {
     labelExtra?: string
     disabled?: boolean
     inputClass?: string
+    maxLength?: number
 }
 const InputPrimax = (
     {
@@ -27,7 +28,8 @@ const InputPrimax = (
         labelExtra,
         disabled = false,
         inputClass,
-    }: FormHeaderProps
+        maxLength
+    }: FormHeaderProps, props: any
 ) => {
     const [typeInput, setTypeInput] = useState<string>(type)
     return (
@@ -42,6 +44,7 @@ const InputPrimax = (
                     {...register(name, { required: required ? required : false })}
                     placeholder={placeholder}
                     type={typeInput}
+                    maxLength={maxLength}
                 />
                 {type === 'password' && (
                     <div className="inputPrimax-icon">

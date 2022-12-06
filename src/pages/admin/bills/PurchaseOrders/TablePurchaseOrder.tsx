@@ -1,23 +1,33 @@
+import React from 'react'
 import Table, { ColumnsType } from "antd/lib/table";
-import { IRegOfConceptsObjModel } from "../../../../store/registrationOfConcepts/regOfConcepts.interface";
-
+import { IPurchaseOrdersObjModel } from '../../../../store/purchaseOrders/purchaseOrders.interface';
 interface IProps {
-  data: IRegOfConceptsObjModel[];
+  data: IPurchaseOrdersObjModel[];
   deleteAction?: (id: number) => void;
-  openModal?: (select?: IRegOfConceptsObjModel) => void;
+  openModal?: (select?: IPurchaseOrdersObjModel) => void;
 }
-
-const TableRegistrationOfConcepts = ({ data, deleteAction, openModal }: IProps) => {
-  const columns: ColumnsType<IRegOfConceptsObjModel> = [
+const TablePurchaseOrder = ({ data, deleteAction, openModal }: IProps) => {
+  const columns: ColumnsType<IPurchaseOrdersObjModel> = [
+  //   id: number;
+  // operationCode: string;
+  // purchaseAmount: number;
+  // documentNumber: string;
+  // registrationDate: string;
+  // state: boolean;
     {
-      title: "COD. CONCEPTO",
-      dataIndex: "code",
-      key: "code",
+      title: "COD. OPERACION",
+      dataIndex: "operationCode",
+      key: "operationCode",
     },
     {
-      title: "DESCRIPCION DEL CONCEPTO",
-      dataIndex: "description",
-      key: "description",
+      title: "MONTO DE COMPRA",
+      dataIndex: "purchaseAmount",
+      key: "purchaseAmount",
+    },
+    {
+      title: "NRO. DOCUMENTO",
+      dataIndex: "documentNumber",
+      key: "documentNumber",
     },
     {
       title: "OPCIONES",
@@ -49,9 +59,7 @@ const TableRegistrationOfConcepts = ({ data, deleteAction, openModal }: IProps) 
         </div>
       ),
     },
-  ];
-
+  ]
   return <Table columns={columns} dataSource={data} scroll={{ x: 1500 }} />;
-};
-
-export default TableRegistrationOfConcepts;
+}
+export default TablePurchaseOrder
