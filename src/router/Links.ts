@@ -42,11 +42,6 @@ const Links: ILink[] = [
                 element: RegistrationOfConcepts
             },
             {
-                name: "Registro de documentos",
-                path: "registro-documentos",
-                element: DocumentRegistration
-            },
-            {
                 name: "Partidas",
                 path: "partidas",
                 element: Items
@@ -65,8 +60,12 @@ const Links: ILink[] = [
                 name: "gestion de operaciones",
                 path: "gestion-operaciones",
                 element: OperationManagement
+            },
+            {
+                name: "Registro de documentos",
+                path: "registro-documentos",
+                element: DocumentRegistration
             }
-
         ]
     },
     {

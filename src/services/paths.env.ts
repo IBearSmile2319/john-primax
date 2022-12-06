@@ -33,7 +33,7 @@ export const DELETE_PURCHASE_ORDERS = `${GET_PURCHASE_ORDERS}/delete/:id`;
 export const GET_EXPORTE_PURCHASE_ORDERS = `${GET_PURCHASE_ORDERS}/Export`;
 
 // *************************************************************************************************
-//                      OPERATION MANAGEMENT se usa en el post de purchase orders
+                    //  OPERATION MANAGEMENT (se usa en el post de purchase orders
 // *************************************************************************************************
 export const GET_OPERATION_MANAGEMENT = "/OperationManagement";
 // falta
@@ -45,19 +45,19 @@ export const GET_USER_OPERATIONS = "/UserOperations";
 // falta
 
 // *************************************************************************************************
-//                      MATERIALS MANAGEMENT api no funciona aun no se integra
+//                      MATERIALS MANAGEMENT 
 // *************************************************************************************************
 export const GET_MATERIALS_MANAGEMENT = "/MaterialsManagement";
 // falta
 
 // *************************************************************************************************
-//                      ITEMS tambien no funciona y falta integrar
+//                      ITEMS 
 // *************************************************************************************************
 export const GET_ITEMS = "/Items";
 // falta
 
 // *************************************************************************************************
-//                      DOCUMENT REGISTRATION
+//                      DOCUMENT REGISTRATION falta datos
 // *************************************************************************************************
 export const GET_DOCUMENT_REGISTRATION = "/DocumentRegistration";
 // falta

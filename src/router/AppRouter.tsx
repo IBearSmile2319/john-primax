@@ -45,12 +45,14 @@ const AppRouter = () => {
       )
     }
   }
+  // "email": "jhon.espino@gmailcom",
+  // "password": "123456jh"
 
   return (
     <Routes>
       <Route path="/" element={<PrivateRoutes admin={
-        // token ? true : false
-        true
+        token ? true : false
+        // true
         } />}>
         <Route index element={<Navigate to="/mantenimiento" />} />
         {

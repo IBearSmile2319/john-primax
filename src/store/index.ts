@@ -1,4 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
+import { itemsSlice } from "./items/items.slice";
+import { materialsManagementSlice } from "./MaterialsManagement/materialsManagement.slice";
 import { operationManagementSlice } from "./operationManagement/operationManagement.slice";
 import { providersSlice } from "./providers/providers.slice";
 import { purchaseOrdersSlice } from "./purchaseOrders/purchaseOrders.slice";
@@ -15,6 +17,8 @@ export const store = configureStore({
     purchaseOrders: purchaseOrdersSlice.reducer,
     operationManagement: operationManagementSlice.reducer,
     userOperations: userOperationsSlice.reducer,
+    materialsManagement: materialsManagementSlice.reducer,
+    items: itemsSlice.reducer,
   },
 });
 
