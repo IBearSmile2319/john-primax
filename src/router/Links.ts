@@ -96,10 +96,41 @@ const Links: ILink[] = [
                 path: '',
                 element: PettyCash,
             },
+            
             {
-                name: "Ordenes de compra",
+                name: "Declaración de gastos",
+                path: "declaracion-gastos",
+                element: Bills
+            },
+            {
+                name: "Facturas aprobadas",
+                path: "facturas-aprobadas",
+                element: Bills
+            },
+            {
+                name: "Declaraciones aprobadas",
+                path: "declaraciones-aprobadas",
+                element: Bills
+            },
+            {
+                name: "Ordenes de compra", // esta listo.
                 path: "ordenes-compra",
                 element: PurchaseOrders
+            },
+            {
+                name: "Registro de pedidos",
+                path: "registro-pedidos",
+                element: Bills
+            },
+            {
+                name: "Registro de pedidos aprobados",
+                path: "registro-pedidos-aprobados",
+                element: Bills
+            },
+            {
+                name: "kardex de pedidos",
+                path: "kardex-pedidos",
+                element: Bills
             }
         ]
     }

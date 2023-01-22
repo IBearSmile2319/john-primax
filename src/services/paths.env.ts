@@ -60,4 +60,12 @@ export const GET_ITEMS = "/Items";
 //                      DOCUMENT REGISTRATION falta datos
 // *************************************************************************************************
 export const GET_DOCUMENT_REGISTRATION = "/DocumentRegistration";
+export const GET_EXPORTE_DOCUMENT_REGISTRATION = `${GET_DOCUMENT_REGISTRATION}/Export`;
+// falta
+
+// *************************************************************************************************
+//                 SYSTEM PARAMETERS     
+// *************************************************************************************************
+
+export const GET_SYSTEM_PARAMETERS = "/SystemParameters";
 // falta

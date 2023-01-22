@@ -1,4 +1,6 @@
+import { systemParametersSlice } from './systemParameters/systemParameter.slice';
 import { configureStore } from "@reduxjs/toolkit";
+import { documentRegistrationSlice } from "./documentRegistration/documentRegistration.slice";
 import { itemsSlice } from "./items/items.slice";
 import { materialsManagementSlice } from "./MaterialsManagement/materialsManagement.slice";
 import { operationManagementSlice } from "./operationManagement/operationManagement.slice";
@@ -19,6 +21,8 @@ export const store = configureStore({
     userOperations: userOperationsSlice.reducer,
     materialsManagement: materialsManagementSlice.reducer,
     items: itemsSlice.reducer,
+    documentRegistration: documentRegistrationSlice.reducer,
+    systemParameters: systemParametersSlice.reducer,
   },
 });
 

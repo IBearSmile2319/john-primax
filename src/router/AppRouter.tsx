@@ -51,7 +51,7 @@ const AppRouter = () => {
   return (
     <Routes>
       <Route path="/" element={<PrivateRoutes admin={
-        token ? true : false
+        true
         // true
         } />}>
         <Route index element={<Navigate to="/mantenimiento" />} />
